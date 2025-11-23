@@ -9,7 +9,7 @@ function AppCard() {
         <div className="relative flex items-center justify-center">
             {/* A square image */}
             <Image
-                src="/wall-e.jpg"
+                src="/g1-wavehand.jpg"
                 width={500}
                 height={300}
                 alt="App"
@@ -17,7 +17,7 @@ function AppCard() {
                 className="rounded-lg"
             />
             <p className="absolute bottom-0 right-2 text-white text-xs">
-                Photo by Jason Leung on Unsplash
+                Photo by Unitree. https://www.unitree.com/g1
             </p>
         </div>
         
