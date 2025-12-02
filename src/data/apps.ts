@@ -9,7 +9,7 @@ export const apps = [
     },
     theme: "dark",
     side: "right",
-    link: "google.com"
+    link: "https://timauz.gumroad.com/l/speak-g1"
   }
     ,
   {
