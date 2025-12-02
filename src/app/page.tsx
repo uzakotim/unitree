@@ -1,12 +1,17 @@
 import AppCard from "@/components/custom/AppCard";
-import Image from "next/image";
-
+import IntroCard from "@/components/custom/IntroCard";
+import { apps } from "@/data/apps";
 export default function Home() {
+  console.log(apps);
   return (
     <div className="fle w-full h-full items-center justify-center bg-zinc-200 font-sans dark:bg-black">
-      <div className="flex flex-col items-center justify-center p-10 md:p-20">
-        <h2 className="font-bold text-5xl text-slate-800 mb-20">Apps for Unitree G1 robot</h2> 
-        <AppCard />
+      <div className="flex flex-col items-center justify-center">
+        <IntroCard />
+        <div className="flex flex-col">
+          {apps.map((app, index) => (
+            <AppCard key={index} app={app} />
+          ))}
+        </div>
        </div>
        
     </div>
