@@ -34,25 +34,23 @@ function AppCard({ app }: { app: any }) {
   const compatibilityBadgeText = "text-white";
 
   const priceColor = featureText;
-  const buttonBg = isDark ? "bg-white" : "bg-white";
-  const buttonText = isDark ? "text-slate-800 hover:text-white":"text-slate-800 hover:text-white";
+  const buttonBg = isDark ? featureBg : "bg-zinc-20";
+  const buttonText = isDark ? "text-white":"text-slate-800 hover:text-white";
   const buttonHover = isDark ? "hover:bg-slate-800" : "hover:bg-slate-800";
-  const buttonRing = isDark ? "border-slate-800 hover:border-white" : "border-slate-800";
+  const buttonRing = isDark ? "border-slate-900 hover:border-white" : "border-slate-800";
   const isRight = app.side === "right";
 
   return (
     <div
       className={`
-        flex flex-col md:flex-row gap-5 md:gap-80 items-center justify-center
+        flex flex-col lg:flex-row gap-5 lg:gap-80 items-center justify-center
         h-auto w-full min-w-screen py-10
-        shadow-lg hover:shadow-2xl transition-shadow duration-300
         bg-cover bg-center
-        border border-white/20
         backdrop-blur-sm ${bgColor}
-        ${isRight ? "md:flex-row-reverse" : ""}`}
+        ${isRight ? "lg:flex-row-reverse" : ""}`}
     >
       {/* Title */}
-      <h2 className={`text-extra-bold text-5xl md:text-7xl text-center drop-shadow-lg ${titleColor}`}>
+      <h2 className={`text-extra-bold text-5xl md:text-7xl text-center ${titleColor}`}>
         {app.title}
       </h2>
 

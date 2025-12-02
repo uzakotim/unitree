@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={montserrat.className}>
       <body
-        className={`antialiased bg-linear-to-r from-zing-50 bg-zinc-200`}
+        className={`antialiased`}
       >
         <div className="flex flex-col min-w-screen h-screen">
           <div className="flex flex-1 items-center justify-center">

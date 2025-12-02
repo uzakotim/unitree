@@ -17,7 +17,7 @@ export const apps = [
     price: "$1.99",
     json: {
       category: "locomotion",
-        features: ["Programmable hand wave gesture for Unitree G1 robot", "Acts as a test script for running the robot", "Low-level motor control", "Written in the fastest C++","Source code available and modifiable" ],
+        features: ["Programmable hand wave gesture", "Acts as a test script for running the robot", "Low-level motor control", "Written in the fastest C++","Source code available and modifiable" ],
       compatibility: [ "Ubuntu 24.04"],
     },
     theme: "light",
