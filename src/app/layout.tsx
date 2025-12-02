@@ -3,6 +3,10 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/custom/Footer";
 
+import { Montserrat } from 'next/font/google';
+
+const montserrat = Montserrat({ subsets: ['latin'] });
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -24,9 +28,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={montserrat.className}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-linear-to-r from-zing-50 bg-zinc-200`}
+        className={`antialiased bg-linear-to-r from-zing-50 bg-zinc-200`}
       >
         <div className="flex flex-col min-w-screen h-screen">
           <div className="flex flex-1 items-center justify-center">

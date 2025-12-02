@@ -8,7 +8,8 @@ export const apps = [
       compatibility: ["macOS", "Ubuntu 24.04"]
     },
     theme: "dark",
-    side: "right"
+    side: "right",
+    link: "google.com"
   }
     ,
   {
@@ -20,6 +21,7 @@ export const apps = [
       compatibility: [ "Ubuntu 24.04"],
     },
     theme: "light",
-    side:"left"
+    side:"left",
+    link: "timauz.gumroad.com/l/wavehand_g1"
     },
 ];

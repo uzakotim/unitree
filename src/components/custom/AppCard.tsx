@@ -5,6 +5,16 @@ import AppDetailsCard from "./AppDetailsCard";
 
 function AppCard({ app }: { app: any }) {
   const style: React.CSSProperties = {};
+  const navigateToLink = () => {
+  if (app.link) {
+    // Ensure the link starts with http:// or https://
+    const url = app.link.startsWith("http://") || app.link.startsWith("https://")
+      ? app.link
+      : `https://${app.link}`;
+
+    window.open(url, "_blank");
+  }
+};
 
  
 
@@ -20,13 +30,14 @@ function AppCard({ app }: { app: any }) {
 
   const compatibilityBg = featureBg;
   const compatibilityText = isDark ? "text-white" : "text-gray-800";
-  const compatibilityBadgeBg = isDark ? "bg-green-500" : "bg-green-400";
+  const compatibilityBadgeBg = isDark ? "bg-green-500/50" : "bg-green-500/70";
   const compatibilityBadgeText = "text-white";
 
   const priceColor = featureText;
-  const buttonBg = isDark ? "bg-green-500" : "bg-green-400";
-  const buttonHover = isDark ? "hover:bg-green-400" : "hover:bg-green-300";
-  const buttonRing = isDark ? "focus:ring-green-300" : "focus:ring-green-200";
+  const buttonBg = isDark ? "bg-white" : "bg-white";
+  const buttonText = isDark ? "text-slate-800 hover:text-white":"text-slate-800 hover:text-white";
+  const buttonHover = isDark ? "hover:bg-slate-800" : "hover:bg-slate-800";
+  const buttonRing = isDark ? "border-slate-800 hover:border-white" : "border-slate-800";
   const isRight = app.side === "right";
 
   return (
@@ -41,7 +52,7 @@ function AppCard({ app }: { app: any }) {
         ${isRight ? "md:flex-row-reverse" : ""}`}
     >
       {/* Title */}
-      <h2 className={`text-extra-bold text-6xl md:text-7xl text-center drop-shadow-lg ${titleColor}`}>
+      <h2 className={`text-extra-bold text-5xl md:text-7xl text-center drop-shadow-lg ${titleColor}`}>
         {app.title}
       </h2>
 
@@ -88,15 +99,16 @@ function AppCard({ app }: { app: any }) {
         )}
 
         {/* Price */}
-        <p className={`text-xl font-semibold mt-2 drop-shadow-sm ${priceColor}`}>
+        <p className={`text-xl font-semibold mt-2 ${priceColor}`}>
           {app.price}
         </p>
 
         {/* Button */}
-        <button
+        <button onClick={navigateToLink}
           className={`
-            mt-2 w-auto px-10 py-1.5 sm:py-2 md:py-3
-            ${buttonBg} text-white font-bold
+            mt-2 w-auto px-8 py-3.5
+            border
+            ${buttonBg} ${buttonText} font-bold
             text-xs sm:text-sm md:text-base
             rounded-2xl shadow-lg
             ${buttonHover} hover:shadow-xl
