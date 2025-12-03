@@ -4,7 +4,7 @@ export const apps = [
     price: "$4.99",
     json: {
       category: "speech",
-      features: ["Voice for your robot", "Text-to-speech and speech-to-text conversion", "English-Russian-language support", "Gemini powered intelligence", "Confiurable system prompt", "Source code available and modifiable"],
+      features: ["Voice for your robot", "Text-to-speech and speech-to-text conversion", "English-Russian-language support", "Gemini powered intelligence", "Configurable system prompt", "Source code available and modifiable"],
       compatibility: ["macOS", "Ubuntu 24.04"]
     },
     theme: "dark",
